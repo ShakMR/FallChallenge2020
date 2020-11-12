@@ -1,0 +1,24 @@
+{
+  "name": "pacmancontest",
+  "version": "1.0.0",
+  "description": "",
+  "main": "src/code.js",
+  "scripts": {
+    "build": "webpack",
+    "round": "node manualTest/setup.js ./manualTest/testFIle"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ShakMR/pacmanContest.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ShakMR/pacmanContest/issues"
+  },
+  "homepage": "https://github.com/ShakMR/pacmanContest#readme",
+  "devDependencies": {
+    "webpack": "^4.43.0",
+    "webpack-cli": "^3.3.11"
+  }
+}
