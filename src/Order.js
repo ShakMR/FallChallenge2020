@@ -9,7 +9,7 @@ class Order {
     this.ingrCost = ing;
     this.price = price;
   }
-
+  
   prepare() {
     return `${this.type} ${this.id}`;
   }

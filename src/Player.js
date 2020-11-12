@@ -8,18 +8,37 @@ class Player {
     }
   }
 
-  setIngredient = (ingrIndex, amount) => (this.inventory[ingrIndex] = amount);
+  /**
+   *
+   * @param {Order} order
+   */
+  canPrepare(order) {
+    this.inventory.substract(order.ingrCost).filter((amount) => amount >= 0);
+  }
 
-  addIngredient = (ingrIndex, amount) => (this.inventory[ingrIndex] += amount);
+  setIngredient(ingrIndex, amount) {
+    return (this.inventory[ingrIndex] = amount);
+  }
 
-  useIngredient = (ingrIndex, amount) => (this.inventory[ingrIndex] -= amount);
+  addIngredient(ingrIndex, amount) {
+    return (this.inventory[ingrIndex] += amount);
+  }
 
-  hasEnoughIngredients = (ingrIndex, amount) =>
-    this.inventory[ingrIndex] >= amount;
+  useIngredient(ingrIndex, amount) {
+    return (this.inventory[ingrIndex] -= amount);
+  }
 
-  setRupees = (amount) => (this.rupees = amount);
+  hasEnoughIngredients(ingrIndex, amount) {
+    return this.inventory[ingrIndex] >= amount;
+  }
 
-  addRupees = (amount) => (this.rupees += amount);
+  setRupees(amount) {
+    return (this.rupees = amount);
+  }
+
+  addRupees(amount) {
+    return (this.rupees += amount);
+  }
 }
 
 export default Player;

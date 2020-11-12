@@ -38,6 +38,7 @@ const readPlayers = (players) => {
     let player = players[i];
     if (!player) {
       player = new Player(4);
+      players.push(player);
     }
     const inputs = readline().split(' ');
     for (let j = 0; j < 4; j += 1) {

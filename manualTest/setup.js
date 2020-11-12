@@ -11,4 +11,11 @@ global.readline = () => {
   return ret;
 };
 
-require('../dist/main.js');
+try {
+  require('../dist/main.js');
+} catch (err) {
+  if (err === 'EOF') {
+    return;
+  }
+  throw err;
+}

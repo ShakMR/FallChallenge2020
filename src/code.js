@@ -1,4 +1,4 @@
-import { debug } from './Utils';
+import './Utils';
 import readInput from './readInput';
 
 import chooseAction from './engine';
@@ -17,7 +17,8 @@ while (true) {
   // Write an action using console.log()
   // To debug: debug('Debug messages...');
 
+  debug(players, orders);
   const nextAction = chooseAction(players, orders);
   // in the first league: BREW <id> | WAIT; later: BREW <id> | CAST <id> [<times>] | LEARN <id> | REST | WAIT
-  console.log(nextAction);
+  debug(nextAction);
 }

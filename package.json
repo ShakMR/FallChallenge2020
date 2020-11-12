@@ -5,9 +5,7 @@
   "main": "src/code.js",
   "scripts": {
     "lint": "eslint ",
-    "flow": "flow src",
-    "unflow": "flow-remove-types src/ --out-dir pre/",
-    "build": "npm run unflow && webpack",
+    "build": "webpack",
     "round": "node manualTest/setup.js ./manualTest/testFIle"
   },
   "repository": {
