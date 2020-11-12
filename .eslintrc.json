@@ -1,0 +1,10 @@
+{
+  "extends": [
+    "skyscanner"
+  ],
+  "plugins": ["prettier"],
+  "rules": {
+    "no-console": "off",
+    "no-return-assign": "off"
+  }
+}
