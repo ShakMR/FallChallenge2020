@@ -6,7 +6,7 @@
   "scripts": {
     "lint": "eslint ",
     "build": "webpack",
-    "round": "node manualTest/setup.js ./manualTest/testFIle"
+    "round": "npm run build && node manualTest/setup.js ./manualTest/testFile"
   },
   "repository": {
     "type": "git",

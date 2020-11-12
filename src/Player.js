@@ -13,7 +13,8 @@ class Player {
    * @param {Order} order
    */
   canPrepare(order) {
-    this.inventory.substract(order.ingrCost).filter((amount) => amount >= 0);
+    // ingrCost are negative numbers
+    return this.inventory.add(order.ingrCost).some((amount) => amount >= 0);
   }
 
   setIngredient(ingrIndex, amount) {

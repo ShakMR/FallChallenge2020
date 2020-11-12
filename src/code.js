@@ -1,4 +1,5 @@
-import './Utils';
+import './globals';
+
 import readInput from './readInput';
 
 import chooseAction from './engine';
@@ -21,4 +22,5 @@ while (true) {
   const nextAction = chooseAction(players, orders);
   // in the first league: BREW <id> | WAIT; later: BREW <id> | CAST <id> [<times>] | LEARN <id> | REST | WAIT
   debug(nextAction);
+  console.log(nextAction);
 }
